@@ -42,5 +42,5 @@ def filter(fileName, listParam):
     
     
 #La liste des colonnes à réserver
-listParam = ['Div','Date','AwayTeam']
+listParam = ['Div','HomeTeam','AwayTeam','FTHG','FTAG']
 filter('SP1.csv',listParam)
