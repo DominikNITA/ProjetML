@@ -6,6 +6,7 @@ Created on Fri Mar 19 14:52:49 2021
 """
 import pandas as pd
 import numpy as np
+import glob
 
 def filter(fileName, listParam):
     df = pd.read_csv(fileName)
@@ -43,4 +44,7 @@ def filter(fileName, listParam):
     
 #La liste des colonnes à réserver
 listParam = ['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'HS', 'AS', 'HST', 'AST', 'HC', 'AC']
-filter('SP1.csv',listParam)
+filesPaths = glob.glob("**/*.csv")
+print(filesPaths)
+for dataFile in filesPaths:
+    filter(dataFile,listParam)
